@@ -1,0 +1,162 @@
+.tab_body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab_header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab_header .tab_all {
+    width: 100%;
+    display: flex;
+    position: relative;
+    height: 50px;
+}
+
+.tab_header .tab_all .tab {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab_header .tab_all .indicator {
+    width: 40%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    background: #3CCDDC;
+    transition: 0.6s ease;
+    margin-left: 5%;
+    border-radius: 5px;
+}
+
+.tab_header .tab_all .block {
+    width: 100%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab_body .speaker {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab_body header .mic {
+    width: 15%;
+    height: 7px;
+    background: #92b4f2;
+    border-radius: 120px;
+}
+
+.tab_body .block {
+    width: 100%;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tab_body main {
+    flex: 1;
+    width: 200%;
+    height: 100%;
+}
+
+.tab_body main .tab_reel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s cubic-bezier(0.18, 1.14, 0.5, 1.18);
+}
+
+.tab_body main .tab_reel .tab_panel1, .tab_body main .tab_reel .tab_panel2 {
+    width: 50%;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.tab_body main .card {
+    max-width: 1296px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-bottom: 0.7rem;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 5px 15px rgba(100, 149, 237, 0.3);
+}
+
+.tab_body main .card_large figure {
+    width: 100%;
+    margin: 0;
+    background: #bfd3f8;
+}
+
+.tab_body main .card_large .desc {
+    padding-left: 0px;
+}
+
+.tab_body main .card_list {
+    display: flex;
+    flex-direction: row;
+}
+
+.tab_body main .card_list figure {
+    border-radius: 120px;
+    background: #bfd3f8;
+    margin: 0;
+}
+
+.tab_body main .desc {
+  width: 100%;
+  padding: 10px;
+}
+
+.tab_body main .desc .block {
+    width: 40%;
+    height: 7px;
+    margin-bottom: 5px;
+    background: #92b4f2;
+}
+
+.tab_body main .desc .block:nth-child(2) {
+    width: 35%;
+    margin-bottom: 0px;
+}
+
+.tab1.active ~ .indicator {
+    left: 0;
+}
+
+.tab2.active ~ .indicator {
+   left: 50%;
+}
+
+.history_img {
+    width: 350px;
+    height: 250px;
+}
+
+.comment_button {
+    display: inline-block;
+    background: #3CCDDC;
+    padding: 10px;
+    border-radius: 7px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+}

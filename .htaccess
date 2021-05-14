@@ -1,0 +1,25 @@
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteOptions inherit
+
+ErrorDocument 404 https://monistic-hotel.com/404
+ErrorDocument 500 https://monistic-hotel.com/404
+
+#AddType application/x-httpd-php .htm .html
+
+RewriteCond %{HTTP_REFERER} !^https://monistic-hotel.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://monistic-hotel.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.monistic-hotel.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.monistic-hotel.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ https://monistic-hotel.com [R,NC]
+
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
